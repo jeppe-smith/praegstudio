@@ -1,0 +1,21 @@
+---
+import { Image, Picture } from "@astrojs/image/components";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <div class="min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1 relative">
+      <Image
+        src="/hero.webp"
+        format="webp"
+        width="1920"
+        height="1280"
+        alt="descriptive text"
+        class="absolute inset-0 h-full object-cover"
+      />
+    </main>
+  </div>
+</Layout>

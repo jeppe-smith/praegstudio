@@ -1,0 +1,95 @@
+---
+import { Image } from "@astrojs/image/components";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const people = [
+  {
+    name: "Mads Kappel Mikkelsen",
+    title: "Arkitekt, ejer",
+    phone: "+45 25 12 01 66",
+    email: "mads@praegstudio.dk",
+    image: "/people/mads.jpg",
+  },
+  {
+    name: "Flemming Lind Larsen",
+    title: "Arkitekt",
+    email: "flemming@praegstudio.dk",
+    image: "/people/flemming.jpg",
+  },
+  {
+    name: "Martin Elnegaard Hansen",
+    title: "BA. Architect",
+    phone: "+45 30 28 62 56",
+    email: "martin@praegstudio.dk",
+    image: "/people/martin.jpg",
+  },
+  {
+    name: "Dorian Wattez",
+    title: "Bygningskonstruktør / Constructing Architect",
+    phone: "+45 22 51 21 30",
+    email: "dorian@praegstudio.dk",
+    image: "/people/dorian.jpg",
+  },
+  {
+    name: "Vicki Lundgaard",
+    title: "Arkitekt, Cand.arch.",
+    phone: "+45 31 72 67 70",
+    email: "vicki@praegstudio.dk",
+    image: "/people/vicki.jpg",
+  },
+  {
+    name: "Frank Schmidt",
+    title: "Bygningskonstruktør BTH",
+    phone: "+45 25 32 50 03",
+    email: "frank@praegstudio.dk",
+    image: "/people/frank.jpg",
+  },
+  {
+    name: "Anja Kristina Koldby Jensen",
+    title: "Arkitekt, Cand.arch.",
+    email: "anja@praegstudio.dk",
+    image: "/people/anja.jpg",
+  },
+  {
+    name: "Christine Larsen",
+    title: "Administration- og marketingassistent",
+    email: "christine@praegstudio.dk",
+    image: "/people/christine.jpg",
+  },
+];
+---
+
+<Layout title="Kontakt Præg Studio">
+  <Header />
+  <div>
+    <div class="grid grid-cols-3 gap-12 max-w-screen-xl mx-auto my-12">
+      {
+        people.map((person) => (
+          <div class="flex flex-col">
+            <Image
+              src={person.image}
+              alt={person.name}
+              width={640}
+              aspectRatio={0.71}
+              format="webp"
+            />
+            <h4 class="mt-2 font-medium">{person.name}</h4>
+            <em class="font-garamond mb-2 text-sm">{person.title}</em>
+            {person.phone && (
+              <a
+                href={`tel:${person.phone.split(" ").join("")}`}
+                class="text-sm"
+              >
+                {person.phone}
+              </a>
+            )}
+            <a href={`mailto:${person.email}`} class="text-sm">
+              {person.email}
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

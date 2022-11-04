@@ -6,30 +6,30 @@ import Layout from "../../layouts/Layout.astro";
 const people = [
   {
     name: "Mads Kappel Mikkelsen",
-    title: "Arkitekt, ejer",
+    title: "Indehaver",
     phone: "+45 25 12 01 66",
     email: "mads@praegstudio.dk",
     image: "/people/mads.jpg",
   },
   {
-    name: "Flemming Lind Larsen",
-    title: "Arkitekt",
-    email: "flemming@praegstudio.dk",
-    image: "/people/flemming.jpg",
-  },
-  {
-    name: "Martin Elnegaard Hansen",
-    title: "BA. Architect",
-    phone: "+45 30 28 62 56",
-    email: "martin@praegstudio.dk",
-    image: "/people/martin.jpg",
+    name: "Christine Larsen",
+    title: "Administration- og marketingassistent",
+    email: "christine@praegstudio.dk",
+    image: "/people/christine.jpg",
   },
   {
     name: "Dorian Wattez",
-    title: "Bygningskonstruktør / Constructing Architect",
+    title: "Bygningskonstruktør",
     phone: "+45 22 51 21 30",
     email: "dorian@praegstudio.dk",
     image: "/people/dorian.jpg",
+  },
+  {
+    name: "Martin Elnegaard Hansen",
+    title: "Arkitekt, Cand.arch.",
+    phone: "+45 30 28 62 56",
+    email: "martin@praegstudio.dk",
+    image: "/people/martin.jpg",
   },
   {
     name: "Vicki Lundgaard",
@@ -40,10 +40,16 @@ const people = [
   },
   {
     name: "Frank Schmidt",
-    title: "Bygningskonstruktør BTH",
+    title: "Bygningskonstruktør",
     phone: "+45 25 32 50 03",
     email: "frank@praegstudio.dk",
     image: "/people/frank.jpg",
+  },
+  {
+    name: "Flemming Lind Larsen",
+    title: "Arkitekt",
+    email: "flemming@praegstudio.dk",
+    image: "/people/flemming.jpg",
   },
   {
     name: "Anja Kristina Koldby Jensen",
@@ -51,22 +57,36 @@ const people = [
     email: "anja@praegstudio.dk",
     image: "/people/anja.jpg",
   },
-  {
-    name: "Christine Larsen",
-    title: "Administration- og marketingassistent",
-    email: "christine@praegstudio.dk",
-    image: "/people/christine.jpg",
-  },
 ];
 ---
 
 <Layout title="Kontakt Præg Studio">
   <Header />
-  <div>
-    <div class="grid grid-cols-3 gap-12 max-w-screen-xl mx-auto my-12">
+  <div class="my-12">
+    <div class="grid grid-cols-3 gap-12 2xl:grid-cols-4">
+      <div class="col-span-2 space-y-4">
+        <h1 class="text-4xl font-bold mb-6">Præg Studio</h1>
+        <p class="font-garamond text-xl">
+          Præg Studio, beliggende i Silkeborg, er stiftet af Mads Kappel
+          Mikkelsen i 2015. Præg Studio yder rådgivning fra idéer og visioner,
+          til realiserbare skitser og arbejdstegninger. Vi arbejder med alt fra
+          mindre tilbygninger og ombygninger, villaer og sommerhuse, til
+          komplekse byggerier og bygningstransformationer.
+        </p>
+        <p class="font-garamond text-xl">
+          Med udgangspunkt i kundernes drømme og økonomi, ser vi det som vores
+          fornemste opgave at omsætte ambitionerne til arkitektoniske,
+          funktionelle og langtidsholdbare løsninger af høj kvalitet.
+        </p>
+        <p class="font-garamond text-xl">
+          Tegnestuen som er i stadig vækst, har i dag 7 ansatte og byggeopgaver
+          over hele landet. Udover at drive tegnestuen, medvirker Mads Mikkelsen
+          som ”arkitekt/ekspert” i boligprogrammet “Boligkøb i blinde“.
+        </p>
+      </div>
       {
-        people.map((person) => (
-          <div class="flex flex-col">
+        people.map((person, index) => (
+          <div class={`flex flex-col ${index < 1 && "col-start-1"}`}>
             <Image
               src={person.image}
               alt={person.name}

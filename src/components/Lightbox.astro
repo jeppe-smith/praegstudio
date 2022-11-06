@@ -1,0 +1,45 @@
+---
+import { Image } from "@astrojs/image/components";
+
+export interface Props {
+	images:
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<div class="glide">
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="glide__slide">
+        <Image
+          src="/hero.webp"
+          format="webp"
+          width="1920"
+          height="1280"
+          alt="descriptive text"
+        />
+      </li>
+    </ul>
+  </div>
+  <div data-glide-el="controls">
+    <button
+      class="absolute top-0 bottom-0 left-0 w-24 group transition-colors hover:bg-white hover:bg-opacity-10"
+      data-glide-dir="<"
+    >
+      <Icon
+        name="iconoir:nav-arrow-left"
+        class="w-12 h-12 mx-auto text-white transition-transform group-hover:scale-125"
+      />
+    </button>
+    <button
+      class="absolute top-0 bottom-0 right-0 w-24 group transition-colors hover:bg-white hover:bg-opacity-10"
+      data-glide-dir=">"
+    >
+      <Icon
+        name="iconoir:nav-arrow-right"
+        class="w-12 h-12 mx-auto text-white transition-transform group-hover:scale-125"
+      />
+    </button>
+  </div>
+</div>

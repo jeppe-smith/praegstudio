@@ -1,137 +1,69 @@
 ---
 import { Image } from "@astrojs/image/components";
-import Header from "../../components/Header.astro";
+import PageDescription from "../../components/PageDescription.astro";
 import Layout from "../../layouts/Layout.astro";
+
+const items = [
+  {
+    title: "Sonja og Emil i Rødovre",
+    images: await Astro.glob("./assets/sonja-og-emil/*.jpg"),
+  },
+  {
+    title: "Pernille og Søren i Stensballe",
+    images: await Astro.glob("./assets/pernille-og-søren/*.jpg"),
+  },
+  {
+    title: "Wendy og Jesper i Kalundborg",
+    images: await Astro.glob("./assets/wendy-og-jesper/*.jpg"),
+  },
+  {
+    title: "Molly og Morten i Silkeborg",
+    images: await Astro.glob("./assets/molly-og-morten/*.jpg"),
+  },
+  {
+    title: "Charlotte og Martin i Bjæverskov",
+    images: await Astro.glob("./assets/charlotte-og-martin/*.jpg"),
+  },
+];
 ---
 
-<Layout title="Projekter fra Præg Studio">
-  <Header />
-  <div class="grid grid-cols-3 gap-8">
-    <div class="flex row-span-2 col-span-2">
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="1280"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
+<Layout title="Boligkøb i blinde">
+  <div class="my-12 space-y-24">
+    <div class="grid grid-cols-3 gap-12 2xl:grid-cols-4">
+      <div class="col-span-2">
+        <PageDescription title="Boligkøb i blinde">
+          <p>
+            I tre sæsoner har Mads Kappel Mikkelsen fungeret som kreativ ekspert
+            og arkitekt i boligprogrammet <a
+              href="https://viaplay.dk/serier/boligkob-i-blinde"
+              target="_blank"
+              rel="noreferrer"
+              class="underline"
+            >
+              Boligkøb i Blinde
+            </a>. Oplev en række af Mads og håndværkernes forvandlinger af
+            boliger overalt i Danmark.
+          </p>
+        </PageDescription>
+      </div>
     </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
+
+    {
+      items.map(({ title, images }) => (
+        <div>
+          <h2 class="mb-6 text-2xl font-bold">{title}</h2>
+          <div class="grid grid-cols-2 gap-12 2xl:grid-cols-4">
+            {images.map((image) => (
+              <Image
+                src={image.default}
+                alt={title}
+                width={800}
+                aspectRatio="4:3"
+              />
+            ))}
+          </div>
+        </div>
+      ))
+    }
   </div>
 </Layout>

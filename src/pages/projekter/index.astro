@@ -1,137 +1,33 @@
 ---
 import { Image } from "@astrojs/image/components";
-import Header from "../../components/Header.astro";
 import Layout from "../../layouts/Layout.astro";
+
+const projects = await Astro.glob("./*.md");
 ---
 
 <Layout title="Projekter fra Præg Studio">
-  <Header />
   <div class="grid grid-cols-3 gap-8">
-    <div class="flex row-span-2 col-span-2">
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="1280"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
-    <div>
-      <Image
-        src="/hero.webp"
-        format="webp"
-        width="640"
-        aspectRatio="4:3"
-        alt="Villa i Silkeborg"
-      />
-    </div>
+    {
+      projects.map((project) => {
+        const { frontmatter, url } = project;
+        return (
+          <a href={url} class="group relative overflow-hidden">
+            <Image
+              src={frontmatter.images[0]}
+              format="webp"
+              width="640"
+              aspectRatio="4:3"
+              alt={frontmatter.title}
+              class="transition-transform duration-300 ease-out group-hover:scale-105"
+            />
+            <div class="duration-400 absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity group-hover:opacity-100">
+              <h2 class="translate-y-2 text-xl font-medium text-white transition-transform duration-300 group-hover:translate-y-0">
+                {frontmatter.title}
+              </h2>
+            </div>
+          </a>
+        );
+      })
+    }
   </div>
 </Layout>

@@ -1,0 +1,39 @@
+---
+import { Image, Picture } from "@astrojs/image/components";
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <div class="my-12">
+    <div class="grid grid-cols-3 gap-12 2xl:grid-cols-4">
+      <div class="col-span-2 space-y-4">
+        <h1 class="text-4xl font-bold mb-6">{frontmatter.title}</h1>
+        <p class="font-garamond text-xl">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam modi
+          quaerat ad quasi et soluta enim deserunt, deleniti harum a molestias
+          voluptate voluptatem ea totam! Aliquid similique enim adipisci
+          pariatur.
+        </p>
+      </div>
+      {
+        frontmatter.images.map((image: string, index: number) => (
+          <a
+            href={image}
+            target="_blank"
+            class={`flex cursor-default flex-col ${index < 1 && "col-start-1"}`}
+          >
+            <Picture
+              src={image}
+              widths={[640]}
+              sizes="(max-width: 800px) 100vw, 800px"
+              aspectRatio="4:3"
+              alt={frontmatter.title}
+            />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

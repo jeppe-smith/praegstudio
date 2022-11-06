@@ -2,37 +2,51 @@
 import { Icon } from "astro-icon";
 ---
 
-<nav class="h-24 flex justify-between items-center">
-  <a href="/">
-    <picture>
-      <!-- <source
-          srcset="/praegstudio-white.svg"
-          media="(prefers-color-scheme: dark)"
-        /> -->
-      <img src="/praegstudio-black.svg" class="h-10" />
-    </picture>
-  </a>
-  <div
-    class="dark:text-white space-x-12 uppercase tracking-widest text-base absolute left-1/2 -translate-x-1/2"
-  >
-    <a href="/projekter">Projekter</a>
-    <a href="/boligkoeb-i-blinde">Boligkøb i blinde</a>
-    <a href="/kontakt">Kontakt</a>
-  </div>
-  <div class="space-x-2 flex">
-    <a
-      href="https://da-dk.facebook.com/praegstudio/"
-      target="_blank"
-      class="p-2 rounded-full border border-gray-700 dark:border-gray-600 dark:text-white hover:text-gray-100 hover:scale-105 transition"
+<div class="h-24">
+  <nav class="fixed top-0 right-0 left-0">
+    <div
+      class="h-24 flex justify-between items-center max-w-screen-3xl mx-auto px-4 sm:px-12"
     >
-      <Icon name="iconoir:facebook" class="w-5 h-5" />
-    </a>
-    <a
-      href="https://www.instagram.com/praeg_studio/?hl=da"
-      target="_blank"
-      class="p-2 rounded-full border border-gray-700 dark:border-gray-600 dark:text-white hover:text-gray-100 hover:scale-105 transition"
-    >
-      <Icon name="iconoir:instagram" class="w-5 h-5" />
-    </a>
-  </div>
-</nav>
+      <a href="/">
+        <picture>
+          <!-- <source
+            srcset="/praegstudio-white.svg"
+            media="(prefers-color-scheme: dark)"
+          /> -->
+          <img src="/praegstudio-black.svg" class="h-10" />
+        </picture>
+      </a>
+      <div
+        class="dark:text-white space-x-12 uppercase tracking-widest text-base absolute left-1/2 -translate-x-1/2"
+      >
+        <a href="/projekter">Projekter</a>
+        <a href="/boligkoeb-i-blinde">Boligkøb i blinde</a>
+        <a href="/kontakt">Kontakt</a>
+      </div>
+      <div class="space-x-2 flex">
+        <a
+          href="https://da-dk.facebook.com/praegstudio/"
+          target="_blank"
+          class="p-2 rounded-full border border-gray-700 dark:border-gray-600 dark:text-white hover:text-gray-100 hover:scale-105 transition"
+        >
+          <Icon name="iconoir:facebook" class="w-5 h-5" />
+        </a>
+        <a
+          href="https://www.instagram.com/praeg_studio/?hl=da"
+          target="_blank"
+          class="p-2 rounded-full border border-gray-700 dark:border-gray-600 dark:text-white hover:text-gray-100 hover:scale-105 transition"
+        >
+          <Icon name="iconoir:instagram" class="w-5 h-5" />
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<style>
+  nav {
+    background: rgba(255, 255, 255, 0.8);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(8.7px);
+  }
+</style>

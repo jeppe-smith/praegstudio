@@ -2,10 +2,25 @@
 import { Icon } from "astro-icon";
 ---
 
-<div class="h-24">
-  <nav class="fixed top-0 right-0 left-0">
+<div class="h-24" x-data="{ open: false }">
+  <!-- <div
+    id="mobile-menu"
+    class="fixed inset-0 z-50 h-screen bg-white flex flex-col items-center justify-center space-y-12 text-3xl transition-transform"
+    style="transform: translateX(-100%);"
+  >
+    <a href="/projekter">Projekter</a>
+    <a href="/boligkoeb-i-blinde">Boligkøb i blinde</a>
+    <a href="/kontakt">Kontakt</a>
+    <button type="button">
+      <Icon name="iconoir:cancel" class="w-12 h-12 absolute top-6 right-6" />
+    </button>
+  </div> -->
+  <nav
+    class="fixed top-0 right-0 left-0 z-50 overflow-hidden"
+    x-bind:class="open ? 'h-screen' : 'h-24'"
+  >
     <div
-      class="h-24 flex justify-between items-center max-w-screen-3xl mx-auto px-4 sm:px-12"
+      class="flex justify-between items-center max-w-screen-3xl mx-auto px-4 md:px-12 h-24"
     >
       <a href="/">
         <picture>
@@ -17,13 +32,13 @@ import { Icon } from "astro-icon";
         </picture>
       </a>
       <div
-        class="dark:text-white space-x-12 uppercase tracking-widest text-base absolute left-1/2 -translate-x-1/2"
+        class="links absolute top-24 md:top-0 flex flex-col md:flex-row items-center justify-center h-screen md:h-24 md:text-base uppercase tracking-widest md:tracking-normal lg:tracking-widest md:space-x-6 lg:space-x-12 md:space-y-0 text-3xl space-y-12 w-full"
       >
         <a href="/projekter">Projekter</a>
         <a href="/boligkoeb-i-blinde">Boligkøb i blinde</a>
         <a href="/kontakt">Kontakt</a>
       </div>
-      <div class="space-x-2 flex">
+      <div class="flex">
         <a
           href="https://da-dk.facebook.com/praegstudio/"
           target="_blank"
@@ -34,10 +49,23 @@ import { Icon } from "astro-icon";
         <a
           href="https://www.instagram.com/praeg_studio/?hl=da"
           target="_blank"
-          class="p-2 rounded-full border border-gray-700 dark:border-gray-600 dark:text-white hover:text-gray-100 hover:scale-105 transition"
+          class="ml-2 p-2 rounded-full border border-gray-700 dark:border-gray-600 dark:text-white hover:text-gray-100 hover:scale-105 transition"
         >
           <Icon name="iconoir:instagram" class="w-5 h-5" />
         </a>
+        <button
+          type="button"
+          class="ml-4 md:hidden"
+          x-on:click="() => { open = !open; document.body.classList.toggle('overflow-hidden', open)}"
+        >
+          <Icon name="iconoir:menu" class="w-8 h-8" x-show="!open" />
+          <Icon
+            name="iconoir:cancel"
+            class="w-8 h-8"
+            style="display: none;"
+            x-show="open"
+          />
+        </button>
       </div>
     </div>
   </nav>
@@ -46,7 +74,14 @@ import { Icon } from "astro-icon";
 <style>
   nav {
     background: rgba(255, 255, 255, 0.8);
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(8.7px);
   }
+
+  @media (max-width: 767px) {
+    .links {
+      height: calc(100vh - theme(spacing[24]));
+    }
+  }
 </style>
+
+<script></script>

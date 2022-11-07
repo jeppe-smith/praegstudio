@@ -1,7 +1,6 @@
 ---
 import { Image, Picture } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
 
 import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss";
 import Icon from "astro-icon";
@@ -11,7 +10,7 @@ import Icon from "astro-icon";
   <main class="flex-1 relative">
     <div class="glide">
       <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
+        <ul class="glide__slides space-y-4 md:space-y-0">
           <li class="glide__slide">
             <Image
               src="/hero.webp"
@@ -41,7 +40,7 @@ import Icon from "astro-icon";
           </li>
         </ul>
       </div>
-      <div data-glide-el="controls">
+      <div data-glide-el="controls" class="hidden md:block">
         <button
           class="absolute top-0 bottom-0 left-0 w-24 group transition-colors hover:bg-white hover:bg-opacity-10"
           data-glide-dir="<"
@@ -67,17 +66,40 @@ import Icon from "astro-icon";
 
 <script>
   import Glide from "@glidejs/glide";
-  new Glide(".glide", {
-    gap: 0,
-    hoverpause: true,
-    autoplay: false,
-  }).mount();
+
+  let glide: any;
+
+  function doCarousel() {
+    console.log(window.innerWidth, !!glide);
+    if (window.innerWidth >= 768 && !glide) {
+      glide = new Glide(".glide", {
+        gap: 0,
+        hoverpause: true,
+        autoplay: false,
+      }).mount();
+    } else if (window.innerWidth < 768 && glide) {
+      glide.destroy();
+      glide = null;
+    }
+  }
+
+  window.addEventListener("resize", () => doCarousel());
+
+  doCarousel();
 </script>
 
 <style>
-  /* header and footer are both 24 units tall so we know to subtract 48 to make images fit nicely */
-  .glide__slide img {
-    height: calc(100vh - theme(spacing[48]));
-    object-fit: cover;
+  @media (max-width: 767px) {
+    .glide__slides {
+      display: block;
+    }
+  }
+
+  @media (min-width: 768px) {
+    /* header and footer are both 24 units tall so we know to subtract 48 to make images fit nicely */
+    .glide__slide img {
+      height: calc(100vh - theme(spacing[48]));
+      object-fit: cover;
+    }
   }
 </style>

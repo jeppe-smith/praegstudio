@@ -32,6 +32,20 @@ const { title } = Astro.props;
       name="twitter:creator"
       content="Mads Kappel Mikkelsen <mads@praegstudio.dk>"
     />
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-69547352-2"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-69547352-2");
+    </script>
     <title>{title}</title>
   </head>
   <body class="dark:bg-void">

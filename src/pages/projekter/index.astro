@@ -1,33 +1,95 @@
 ---
 import { Image } from "@astrojs/image/components";
+import classNames from "classnames";
 import Layout from "../../layouts/Layout.astro";
 
-const projects = await Astro.glob("./*.md");
+// const projects = await Astro.glob("./*.md");
+
+const projects = await Promise.all([
+  Astro.glob("./villa-i-silkeborg.md"),
+  Astro.glob("./suderbaekgaard-nye-avlsbygninger.md"),
+  Astro.glob("./villa-i-silkeborg-3.md"),
+  Astro.glob("./villa-i-soehoejlandet-2.md"),
+  Astro.glob("./villa-i-vedbaek.md"),
+  Astro.glob("./villa-i-midtjylland.md"),
+  Astro.glob("./landsted-paa-sjaelland.md"),
+  Astro.glob("./administration.md"),
+  Astro.glob("./villa-i-soehoejlandet.md"),
+  Astro.glob("./villa-i-silkeborg-renovering.md"),
+  Astro.glob("./villa-i-silkeborg-2.md"),
+  Astro.glob("./villa-i-ikast.md"),
+  Astro.glob("./villa-i-trekantsomraadet.md"),
+  Astro.glob("./kontormiljoe-i-midtjylland.md"),
+  Astro.glob("./villa-ved-limfjorden.md"),
+  Astro.glob("./villa-ved-vesterhavet.md"),
+
+  Astro.glob("./villa-i-silkeborg-4.md"),
+  Astro.glob("./villa-i-nordsjaelland.md"),
+  Astro.glob("./sommerhus-ved-vesterhavet.md"),
+  Astro.glob("./villa-i-hellerup.md"),
+]);
 ---
 
 <Layout title="Projekter fra Præg Studio">
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 2xl:grid-cols-4">
+  <div class="projects space-y-4 md:space-y-0 md:grid grid-cols-3 gap-8">
     {
-      projects.map((project) => {
+      projects.map(([project], i) => {
         const { frontmatter, url } = project;
         return (
-          <a href={url} class="group relative overflow-hidden">
+          <a
+            href={url}
+            class={classNames(
+              "group relative flex items-center justify-center overflow-hidden bg-gray-100 text-2xl",
+              i === 0 && "col-span-2 row-span-2",
+              i === 1 && "row-span-2",
+              i === 2 && "row-span-2",
+              i === 3 && "col-span-2",
+              i === 4 && "col-span-2 row-span-2",
+              i === 6 && "col-span-3",
+              i === 7 && "col-span-2 row-span-2",
+              i === 8 && "row-span-2",
+              i === 9 && "col-span-3 row-span-2",
+              i === 10 && "col-span-2 row-span-2",
+              i === 11 && "row-span-2",
+              i === 13 && "col-span-2 row-span-2",
+              i === 15 && "col-span-3 row-span-2",
+              i === 17 && "col-span-2 row-span-2",
+              i === 19 && "col-span-2 row-span-2",
+              i === 20 && "row-span-2"
+            )}
+          >
             <Image
               src={frontmatter.images[0]}
-              format="webp"
-              width="768"
-              aspectRatio="4:3"
               alt={frontmatter.title}
-              class="transition-transform duration-300 ease-out group-hover:scale-105"
+              class="h-full w-full object-cover"
+              width={
+                [6, 9, 15].includes(i)
+                  ? 1920
+                  : [0, 3, 4, 7, 9, 10, 13, 17, 19].includes(i)
+                  ? 1280
+                  : 640
+              }
+              aspectRatio={
+                [1, 2, 8, 11, 20].includes(i)
+                  ? "4:6"
+                  : [3].includes(i)
+                  ? "8:3"
+                  : [9, 15].includes(i)
+                  ? "12:6"
+                  : "4:3"
+              }
+              loading={[0, 1].includes(i) ? "eager" : "lazy"}
             />
-            <div class="duration-400 absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity group-hover:opacity-100">
-              <h2 class="translate-y-2 text-xl font-medium text-white transition-transform duration-300 group-hover:translate-y-0">
-                {frontmatter.title}
-              </h2>
-            </div>
           </a>
         );
       })
     }
   </div>
 </Layout>
+
+<style>
+  .projects {
+    /* grid-template-rows: repeat(auto-fit, 480px); */
+    grid-auto-rows: calc((100vw / 3 - theme(spacing[16])) * 0.75);
+  }
+</style>

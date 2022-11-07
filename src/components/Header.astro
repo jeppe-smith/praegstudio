@@ -22,13 +22,19 @@ import { Icon } from "astro-icon";
     <div
       class="flex justify-between items-center max-w-screen-3xl mx-auto px-4 md:px-12 h-24"
     >
-      <a href="/">
+      <a href="/" aria-label="Forside">
         <picture>
           <!-- <source
             srcset="/praegstudio-white.svg"
             media="(prefers-color-scheme: dark)"
           /> -->
-          <img src="/praegstudio-black.svg" class="h-10" />
+          <img
+            src="/praegstudio-black.svg"
+            class="h-10"
+            width="98"
+            height="40"
+            alt="Præg Studio"
+          />
         </picture>
       </a>
       <div
@@ -43,6 +49,7 @@ import { Icon } from "astro-icon";
           href="https://da-dk.facebook.com/praegstudio/"
           target="_blank"
           class="p-2 rounded-full border border-gray-700 dark:border-gray-600 dark:text-white hover:text-gray-100 hover:scale-105 transition"
+          aria-label="Facebook"
         >
           <Icon name="iconoir:facebook" class="w-5 h-5" />
         </a>
@@ -50,6 +57,7 @@ import { Icon } from "astro-icon";
           href="https://www.instagram.com/praeg_studio/?hl=da"
           target="_blank"
           class="ml-2 p-2 rounded-full border border-gray-700 dark:border-gray-600 dark:text-white hover:text-gray-100 hover:scale-105 transition"
+          aria-label="Instagram"
         >
           <Icon name="iconoir:instagram" class="w-5 h-5" />
         </a>

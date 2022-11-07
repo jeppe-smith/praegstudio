@@ -18,6 +18,7 @@ import Icon from "astro-icon";
               width="1920"
               height="1280"
               alt="descriptive text"
+              loading="eager"
             />
           </li>
           <li class="glide__slide">
@@ -49,6 +50,7 @@ import Icon from "astro-icon";
             name="iconoir:nav-arrow-left"
             class="w-12 h-12 mx-auto text-white transition-transform group-hover:scale-125"
           />
+          <span class="sr-only">Forrige billede</span>
         </button>
         <button
           class="absolute top-0 bottom-0 right-0 w-24 group transition-colors hover:bg-white hover:bg-opacity-10"
@@ -58,6 +60,7 @@ import Icon from "astro-icon";
             name="iconoir:nav-arrow-right"
             class="w-12 h-12 mx-auto text-white transition-transform group-hover:scale-125"
           />
+          <span class="sr-only">Næste billede</span>
         </button>
       </div>
     </div>

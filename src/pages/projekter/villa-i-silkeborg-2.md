@@ -10,3 +10,5 @@ images:
   - "/villa-i-silkeborg-2/Præg Studio_atrium.jpg"
   - "/villa-i-silkeborg-2/Præg Studio_eksteriør.jpg"
 ---
+
+Et eksisterende sommerhus på en unik udsigstgrund, skal omdannes til en moderne og unik enfamiliesbolig. Huset orienterer sig enten mod vandet, skoven eller en af husets atriumgårde. Den udvendige lodrette træbeklædning, refererer til de store træer på grunden. Og gør at huset næsten forsvinder i skoven, når du ankommer til huset.

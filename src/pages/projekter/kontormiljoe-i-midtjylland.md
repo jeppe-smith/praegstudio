@@ -9,3 +9,5 @@ images:
   - "/kontormiljoe-i-midtjylland/foyer.jpg"
   - "/kontormiljoe-i-midtjylland/loungeomraade.jpg"
 ---
+
+Et helt nyt moderne kontormiljø til stor virksomhed. De eksisterende kontorceller forvandles til et stort åbent og lyst kontormiljø, med reception, loungeområde, og kantinen med adgang til lukket atriumgård. Den store boks, fungere som rumdeler, og indeholder mødefacaliteter, køkken, depot, og garderobe og toiletter. I samme omgang laves en helt ny og moderne foyer, som giver en flot ankomst til kontormiljøet.

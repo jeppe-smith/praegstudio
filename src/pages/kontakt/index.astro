@@ -64,7 +64,7 @@ const people = [
   <div class="my-12">
     <div class="grid grid-cols-3 gap-12 2xl:grid-cols-4">
       <div class="col-span-2 space-y-4">
-        <h1 class="text-4xl font-bold mb-6">Præg Studio</h1>
+        <h1 class="text-4xl uppercase tracking-wider mb-6">Præg Studio</h1>
         <p class="font-garamond text-xl">
           Præg Studio, beliggende i Silkeborg, er stiftet af Mads Kappel
           Mikkelsen i 2015. Præg Studio yder rådgivning fra idéer og visioner,
@@ -94,7 +94,7 @@ const people = [
               format="webp"
             />
             <h4 class="mt-2 font-medium">{person.name}</h4>
-            <em class="font-garamond mb-2 text-sm">{person.title}</em>
+            <em class="mb-2 font-garamond text-sm">{person.title}</em>
             {person.phone && (
               <a
                 href={`tel:${person.phone.split(" ").join("")}`}

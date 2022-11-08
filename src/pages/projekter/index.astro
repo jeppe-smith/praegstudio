@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image, Picture } from "@astrojs/image/components";
 import classNames from "classnames";
 import Layout from "../../layouts/Layout.astro";
 
@@ -59,7 +59,7 @@ const projects = await Promise.all([
             <Image
               src={frontmatter.images[0]}
               alt={frontmatter.title}
-              class="h-full w-full object-cover transition-transform duration-300 ease-out hover:scale-105"
+              class="h-[75vw] w-full object-cover transition-transform duration-300 ease-out hover:scale-105 md:h-full"
               width={
                 [6, 9, 15].includes(i)
                   ? 1920
@@ -78,7 +78,7 @@ const projects = await Promise.all([
                   ? "12:3"
                   : "4:3"
               }
-              position={[6].includes(i) ? "entropy" : "center"}
+              position={[3, 6].includes(i) ? "entropy" : "center"}
               loading={[0, 1].includes(i) ? "eager" : "lazy"}
             />
             <p class="absolute bottom-8 left-8 uppercase leading-none tracking-wider text-white shadow">

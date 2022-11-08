@@ -25,6 +25,7 @@ tags:
   - "Hørning parkett"
   - "Horning floors"
 images:
+  - "/villa-i-silkeborg-renovering/MADS0711.jpg"
   - "/villa-i-silkeborg-renovering/MADS0612.jpg"
   - "/villa-i-silkeborg-renovering/MADS0655.jpg"
   - "/villa-i-silkeborg-renovering/MADS0724.jpg"
@@ -37,7 +38,6 @@ images:
   - "/villa-i-silkeborg-renovering/_K4A4953.jpg"
   - "/villa-i-silkeborg-renovering/_K4A5065.jpg"
   - "/villa-i-silkeborg-renovering/MADS0624.jpg"
-  - "/villa-i-silkeborg-renovering/MADS0711.jpg"
   - "/villa-i-silkeborg-renovering/MADS0727.jpg"
   - "/villa-i-silkeborg-renovering/MADS0741.jpg"
   - "/villa-i-silkeborg-renovering/MADS0811.jpg"

@@ -13,10 +13,10 @@ tags:
   - "samtalekøkken"
   - "køkkenalrum"
 images:
-  - "/villa-i-silkeborg-4/køkken.jpg"
+  - "/villa-i-silkeborg-4/spisestue.jpg"
   - "/villa-i-silkeborg-4/køkkenø.jpg"
   - "/villa-i-silkeborg-4/mellemgang.jpg"
-  - "/villa-i-silkeborg-4/spisestue.jpg"
+  - "/villa-i-silkeborg-4/køkken.jpg"
   - "/villa-i-silkeborg-4/spisestue-med-have.jpg"
 ---
 

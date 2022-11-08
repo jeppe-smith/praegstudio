@@ -18,8 +18,8 @@ tags:
   - "spær-konstruktion"
   - "kobber"
 images:
-  - "/sommerhus-ved-vesterhavet/ankomst.jpg"
   - "/sommerhus-ved-vesterhavet/gårdrum.jpg"
+  - "/sommerhus-ved-vesterhavet/ankomst.jpg"
   - "/sommerhus-ved-vesterhavet/køkken.jpg"
 ---
 

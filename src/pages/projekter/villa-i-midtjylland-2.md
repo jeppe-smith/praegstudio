@@ -2,7 +2,7 @@
 layout: "../../layouts/ProjectLayout.astro"
 title: "Villa i midtjylland"
 description: "En beskrivelse"
-short: Tilbygning af villa
+short: Tilbygning til villa
 images:
   - "/villa-i-midtjylland-2/Præg Studio_Tilbygning til villa.jpg"
 ---

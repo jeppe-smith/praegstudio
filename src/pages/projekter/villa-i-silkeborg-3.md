@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/ProjectLayout.astro"
 title: "Renovering a villa i Silkeborg"
-description: "En beskrivelse"
+short: "Ombygning af villa"
 thumbnail: "/administration/produktion-og-administrationsbygning-eksterioer.jpg"
 images:
   - "/villa-i-silkeborg-3/Præg Studio_ankomst.jpg"

@@ -1,9 +1,7 @@
 ---
 layout: "../../layouts/ProjectLayout.astro"
-order: 2
 title: "Suderbækgård - nye avlsbygninger"
-description: "Genetablering af staldbygninger til nye formål i Ikast"
-thumbnail: "/suderbækgård-nye-avlsbygninger/sal-lys.jpg"
+short: "Ny udbygning"
 tags:
   - "timberframe"
   - "Douglas gran"

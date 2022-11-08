@@ -2,6 +2,7 @@
 layout: "../../layouts/ProjectLayout.astro"
 title: "Villa i Søhøjlandet"
 description: "En beskrivelse"
+short: "Ombygning af villa"
 thumbnail: "/administration/produktion-og-administrationsbygning-eksterioer.jpg"
 images:
   - "/villa-i-soehoejlandet/Præg Studio_Ombygning_sauna.jpg"

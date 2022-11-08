@@ -1,7 +1,8 @@
 ---
 layout: "../../layouts/ProjectLayout.astro"
 order: 1
-title: "Renovering a villa i Silkeborg"
+title: "Villa i Silkeborg"
+short: "Ny villa"
 description: "En beskrivelse"
 thumbnail: "/administration/produktion-og-administrationsbygning-eksterioer.jpg"
 images:

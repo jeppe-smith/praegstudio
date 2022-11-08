@@ -4,6 +4,7 @@ order: 6
 title: "Villa ved Limfjorden"
 description: "Villa på nordlig strandgrund"
 thumbnail: "/villa-ved-limfjorden/ankomst.jpg"
+short: "Ny villa"
 tags:
   - "kolumba"
   - "tegl"

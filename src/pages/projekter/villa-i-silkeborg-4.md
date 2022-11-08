@@ -3,6 +3,7 @@ layout: "../../layouts/ProjectLayout.astro"
 order: 7
 title: "Villa i Silkeborg"
 description: "Renovering af privat villa"
+short: "Ombygning af villa"
 thumbnail: "/villa-i-silkeborg/køkkenø.jpg"
 tags:
   - "Byg & Design"

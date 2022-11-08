@@ -3,6 +3,7 @@ layout: "../../layouts/ProjectLayout.astro"
 order: 10
 title: "Villa i Ikast"
 description: "Ombygning af 1. sal i privat villa - som aldrig var taget i brug"
+short: "Ombygning af villa"
 thumbnail: "/villa-i-ikast/gennemgang.jpg"
 images:
   - "/villa-i-ikast/gennemgang.jpg"

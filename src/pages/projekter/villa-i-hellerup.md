@@ -3,6 +3,7 @@ layout: "../../layouts/ProjectLayout.astro"
 order: 3
 title: "Villa i Hellerup"
 description: "Total om- og tilbygning af en knap 140 år gammel villa i Hellerup"
+short: "Ombygning af villa"
 thumbnail: "/villa-i-hellerup/terrasse.jpg"
 tags:
   - "renovering"

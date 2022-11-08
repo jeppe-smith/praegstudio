@@ -3,6 +3,7 @@ layout: "../../layouts/ProjectLayout.astro"
 order: 8
 title: 'Villa i Vedbæk - "Amarican Colonial"'
 description: "Detailløsninger i ny villa i Vedbæk"
+short: "Ny villa"
 thumbnail: "/villa-i-vedbæk/køkken.jpg"
 tags:
   - "timberframe"

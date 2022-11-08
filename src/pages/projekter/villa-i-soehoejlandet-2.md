@@ -2,7 +2,7 @@
 layout: "../../layouts/ProjectLayout.astro"
 order: 4
 title: "Villa i Søhøjlandet"
-description: "Villa på vestvendt og helt unik søgrund"
+short: "Ny villa"
 thumbnail: "/villa-i-søhøjlandet/fra-vejen.jpg"
 tags:
   - "træhus"

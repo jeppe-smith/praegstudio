@@ -3,6 +3,7 @@ layout: "../../layouts/ProjectLayout.astro"
 order: 11
 title: "Villa i Trekantsområdet"
 description: "Etapevis renovering af privat villa"
+short: "Tilbygning til villa"
 thumbnail: "/villa-i-trekantsområdet/orangeri-trappe.jpg"
 tags:
   - "renovering"

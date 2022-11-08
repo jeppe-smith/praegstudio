@@ -2,6 +2,7 @@
 layout: "../../layouts/ProjectLayout.astro"
 title: "Villa ved Vesterhavet"
 description: "Gennemgribende, nænsom transformation af privat villa"
+short: "Ombygning af villa"
 thumbnail: "/villa-ved-vesterhavet/pool.jpg"
 images:
   - "/villa-ved-vesterhavet/pool.jpg"

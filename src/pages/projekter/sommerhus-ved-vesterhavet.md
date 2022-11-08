@@ -3,6 +3,7 @@ layout: "../../layouts/ProjectLayout.astro"
 order: 12
 title: "Sommerhus ved Vesterhavet"
 description: "Sommerhus med plads til to familier"
+short: "Nyt sommerhus"
 thumbnail: "/sommerhus-ved-vesterhavet/køkken.jpg"
 tags:
   - "sommerhus"

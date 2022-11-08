@@ -3,6 +3,7 @@ layout: "../../layouts/ProjectLayout.astro"
 order: 5
 title: "Renovering og ombygning af villa i Silkeborg"
 description: "Totalrenovering af villa fra 1969 på kuperet grund med søudsigt"
+short: "Ombygning af villa"
 thumbnail: "/villa-i-silkeborg-renovering/MADS0711.jpg"
 tags:
   - "renovering"

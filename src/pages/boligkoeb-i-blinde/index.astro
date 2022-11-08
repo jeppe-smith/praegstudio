@@ -29,7 +29,7 @@ const items = [
 
 <Layout title="Boligkøb i blinde">
   <div class="my-12 space-y-24">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 2xl:grid-cols-4">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
       <div class="col-span-2">
         <PageDescription title="Boligkøb i blinde">
           <p>
@@ -52,7 +52,7 @@ const items = [
       items.map(({ title, images }) => (
         <div>
           <h2 class="mb-6 text-2xl uppercase tracking-wider">{title}</h2>
-          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {images.map((image) => (
               <Image
                 src={image.default}

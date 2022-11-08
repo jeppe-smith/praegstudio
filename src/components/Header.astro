@@ -4,7 +4,7 @@ import { Icon } from "astro-icon";
 
 <div class="h-24" x-data="{ open: false }">
   <nav
-    class="fixed top-0 right-0 left-0 z-50 overflow-hidden"
+    class="fixed top-0 right-0 left-0 z-50 overflow-hidden text-brand"
     x-bind:class="open ? 'h-screen' : 'h-24'"
   >
     <div
@@ -13,7 +13,7 @@ import { Icon } from "astro-icon";
       <a href="/" aria-label="Forside">
         <picture>
           <img
-            src="/praegstudio-black.svg"
+            src="/praegstudio-brand.svg"
             class="h-10"
             width="98"
             height="40"
@@ -32,7 +32,7 @@ import { Icon } from "astro-icon";
         <a
           href="https://da-dk.facebook.com/praegstudio/"
           target="_blank"
-          class="p-2 rounded-full border border-gray-700 dark:border-gray-600 dark:text-white hover:text-gray-100 hover:scale-105 transition"
+          class="p-2 rounded-full border border-gray-700 dark:border-gray-600 hover:scale-105 transition"
           aria-label="Facebook"
         >
           <Icon name="iconoir:facebook" class="w-5 h-5" />
@@ -40,7 +40,7 @@ import { Icon } from "astro-icon";
         <a
           href="https://www.instagram.com/praeg_studio/?hl=da"
           target="_blank"
-          class="ml-2 p-2 rounded-full border border-gray-700 dark:border-gray-600 dark:text-white hover:text-gray-100 hover:scale-105 transition"
+          class="ml-2 p-2 rounded-full border border-gray-700 dark:border-gray-600 hover:scale-105 transition"
           aria-label="Instagram"
         >
           <Icon name="iconoir:instagram" class="w-5 h-5" />

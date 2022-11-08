@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         void: "#10161B",
+        brand: "#5B381C",
       },
       maxWidth: {
         "screen-3xl": "1920px",

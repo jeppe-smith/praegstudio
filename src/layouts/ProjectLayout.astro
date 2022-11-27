@@ -5,7 +5,7 @@ import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={`Præg Studio | ${frontmatter.title}`}>
   <div class="my-12">
     <div class="md:grid space-y-4 md:space-y-0 grid-cols-3 gap-12">
       <div class="col-span-2 space-y-4">

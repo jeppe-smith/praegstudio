@@ -80,6 +80,7 @@ const projects = await Promise.all([
               }
               position={[3, 6].includes(i) ? "entropy" : "center"}
               loading={[0, 1].includes(i) ? "eager" : "lazy"}
+              format="webp"
             />
             <p class="absolute bottom-8 left-8 uppercase leading-none tracking-wider text-white shadow">
               {frontmatter.short}

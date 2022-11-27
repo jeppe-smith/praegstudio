@@ -49,6 +49,8 @@ import { Icon } from "astro-icon";
           type="button"
           class="ml-4 md:hidden"
           x-on:click="() => { open = !open; document.body.classList.toggle('overflow-hidden', open)}"
+          title="menu"
+          aria-label="Menu"
         >
           <Icon name="iconoir:menu" class="w-8 h-8" x-show="!open" />
           <Icon

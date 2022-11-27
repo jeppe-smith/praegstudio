@@ -21,7 +21,9 @@ const { frontmatter } = Astro.props;
           <a
             href={image}
             target="_blank"
-            class={`flex cursor-default flex-col ${index < 1 && "col-start-1"}`}
+            class={`lightbox-image flex cursor-default flex-col ${
+              index < 1 && "col-start-1"
+            }`}
           >
             <Picture
               src={image}
@@ -36,3 +38,20 @@ const { frontmatter } = Astro.props;
     </div>
   </div>
 </Layout>
+
+<style is:inline>
+  .chocolat-wrapper {
+    z-index: 100;
+  }
+
+  .chocolat-overlay {
+    background: #000;
+  }
+</style>
+
+<script>
+  import Chocolat from "chocolat";
+  import "../../node_modules/chocolat/dist/css/chocolat.css";
+
+  Chocolat(document.querySelectorAll(".lightbox-image"));
+</script>

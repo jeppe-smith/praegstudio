@@ -12,12 +12,6 @@ const people = [
     image: "/people/mads.jpg",
   },
   {
-    name: "Christine Larsen",
-    title: "Administration- og marketingassistent",
-    email: "christine@praegstudio.dk",
-    image: "/people/christine.jpg",
-  },
-  {
     name: "Dorian Wattez",
     title: "Bygningskonstruktør",
     phone: "+45 22 51 21 30",
@@ -50,12 +44,6 @@ const people = [
     title: "Arkitekt",
     email: "flemming@praegstudio.dk",
     image: "/people/flemming.jpg",
-  },
-  {
-    name: "Anja Kristina Koldby Jensen",
-    title: "Arkitekt, Cand.arch.",
-    email: "anja@praegstudio.dk",
-    image: "/people/anja.jpg",
   },
 ];
 ---
@@ -96,7 +84,7 @@ const people = [
               format="webp"
             />
             <h4 class="mt-2 font-medium">{person.name}</h4>
-            <em class="mb-2 font-garamond text-sm">{person.title}</em>
+            <em class="font-garamond mb-2 text-sm">{person.title}</em>
             {person.phone && (
               <a
                 href={`tel:${person.phone.split(" ").join("")}`}
